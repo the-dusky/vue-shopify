@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions } from 'vuex';
 
 export default {
-  name: "AuthHandler",
+  name: 'AuthHandler',
   methods: {
-    ...mapActions(["finalizeLogin"])
+    ...mapActions(['finalizeLogin'])
   },
   created() {
     this.finalizeLogin(window.location.hash);

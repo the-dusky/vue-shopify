@@ -1,26 +1,26 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import store from "./store";
-import App from "./App";
-import AuthHandler from "./components/AuthHandler";
-import ImageList from "./components/ImageList";
-import UploadForm from "./components/UploadForm";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import store from './store';
+import App from './App';
+import AuthHandler from './components/AuthHandler';
+import ImageList from './components/ImageList';
+import UploadForm from './components/UploadForm';
 
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   routes: [
     {
-      path: "/oauth2/callback",
+      path: '/oauth2/callback',
       component: AuthHandler
     },
     {
-      path: "/",
+      path: '/',
       component: ImageList
     },
     {
-      path: "/upload",
+      path: '/upload',
       component: UploadForm
     }
   ]
@@ -30,4 +30,4 @@ new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount("#app");
+}).$mount('#app');

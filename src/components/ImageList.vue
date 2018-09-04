@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
-  name: "ImageList",
-  computed: mapGetters(["isLoggedIn", "allImages"]),
-  methods: mapActions(["fetchImages"]),
+  name: 'ImageList',
+  computed: mapGetters(['isLoggedIn', 'allImages']),
+  methods: mapActions(['fetchImages']),
   created() {
     if (this.isLoggedIn === true) {
       this.fetchImages();
