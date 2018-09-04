@@ -1,13 +1,13 @@
 <template>
-    <div v-if="isLoggedIn">
-        <img 
-            v-for="image in allImages"
-            :src="image.link"
-            :key="image.id"
-        >
-    </div>
-    <div v-else>
-        Log in to see image list.
+    <div>
+        <div v-if="isLoggedIn" class="image-container">
+            <img 
+                v-for="image in allImages"
+                :src="image.link"
+                :key="image.id"
+            />
+        </div>
+        <h2 v-else>Log in to get started!</h2>
     </div>
 </template>
 
@@ -26,5 +26,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.image-container {
+  column-count: 3;
+  column-gap: 0;
+}
+img {
+  max-width: 100%;
+  padding: 0 5px 5px;
+}
 </style>
